@@ -1,31 +1,6 @@
-import { combineReducers } from 'redux';
-//import uuid from "uuid";
-import booksReducer from './booksReducer';
-import authorsReducer from './authorsReducer'
-const rootReducer = combineReducers({
-    authors: authorsReducer,
-    books: booksReducer
-});
+import uuid from 'uuid';
 
-export default rootReducer;
-
-/*function booksReducer(state = [] , action ) {
-    let idx; 
-    switch (action.type) {
-        case 'ADD_BOOK': 
-        return [...state, action.book];
-    
-        case 'REMOVE_BOOK':
-        idx = state.findIndex(book => book.id === action.id) 
-        return [...state.slice(0, idx), ...state.slice(idx +1) ]
-
-        default: 
-            return state;
-    }
-}
-
-
-function authorsReducer(state = [] , action ) {
+export default function authorsReducer(state = [] , action ) {
     let idx; 
     switch (action.type) {
         case 'ADD_AUTHOR': 
@@ -53,4 +28,3 @@ function authorsReducer(state = [] , action ) {
     }
 }
 
-*/
