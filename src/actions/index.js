@@ -6,7 +6,7 @@ export const addAuthor = author => {
 };
 
 export const removeAuthor = id => {
-  return {
+  return { 
     type: 'REMOVE_AUTHOR',
     id
   };
